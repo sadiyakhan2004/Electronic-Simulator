@@ -1,5 +1,3 @@
-#To access the simulation, navigate to the following URL in your browser:
-http://localhost:3000/Electronics/simulationName
 
 ## Getting Started
 
