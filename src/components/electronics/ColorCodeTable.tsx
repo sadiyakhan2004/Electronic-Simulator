@@ -28,39 +28,57 @@ const ResistorColorCodes = () => {
 
   return (
     <div className="w-full max-w-7xl border-2 border-green-600 overflow-x-auto">
-    
-        <table className="table-auto w-full min-w-max border-collapse">
-          <thead>
-            <tr>
-              <th className="border border-gray-400 px-4 py-2 bg-gray-300">Color</th>
-              <th className="border border-gray-400 px-4 py-2 bg-gray-200">Digit</th>
-              <th className="border border-gray-400 px-4 py-2 bg-gray-200">Multiplier</th>
-              <th className="border border-gray-400 px-4 py-2 bg-gray-200">Tolerance %</th>
-              <th className="border border-gray-400 px-4 py-2 bg-gray-200">Color Band</th>
-            </tr>
-          </thead>
-          <tbody>
-            {resistorData.map((data, index) => (
-              <tr key={index}>
-                <td className="border bg-gray-300 border-gray-400 px-4 py-2">{data.colorName}</td>
-                <td className="border border-gray-400 px-4 py-2">{data.digit}</td>
-                <td
-                  className="border border-gray-400 px-4 py-2"
-                  dangerouslySetInnerHTML={{ __html: data.multiplier }}
-                />
-                <td className="border border-gray-400 px-4 py-2">{data.tolerance}</td>
-                <td className="border border-gray-400 px-4 py-2">
-                  <span
-                    className="inline-block w-28 h-6 rounded-xl"
-                    style={{ backgroundColor: data.colorSample }}
-                  ></span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-    
-    </div>
+  <table className="table-auto w-full min-w-max border-collapse">
+    <thead>
+      <tr>
+        <th className="border border-gray-400 px-6 py-3 bg-gray-300 text-gray-800 font-semibold text-lg">
+          Color
+        </th>
+        <th className="border border-gray-400 px-6 py-3 bg-gray-200 text-gray-800 font-semibold text-lg">
+          Digit
+        </th>
+        <th className="border border-gray-400 px-6 py-3 bg-gray-200 text-gray-800 font-semibold text-lg">
+          Multiplier
+        </th>
+        <th className="border border-gray-400 px-6 py-3 bg-gray-200 text-gray-800 font-semibold text-lg">
+          Tolerance %
+        </th>
+        <th className="border border-gray-400 px-6 py-3 bg-gray-200 text-gray-800 font-semibold text-lg">
+          Color Band
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {resistorData.map((data, index) => (
+        <tr
+          key={index}
+          className={`${index % 2 === 0 ? "bg-gray-100" : "bg-white"} hover:bg-gray-200`}
+        >
+          <td className="border border-gray-400 px-6 py-3 text-gray-700 font-medium">
+            {data.colorName}
+          </td>
+          <td className="border border-gray-400 px-6 py-3 text-gray-700 font-medium">
+            {data.digit}
+          </td>
+          <td
+            className="border border-gray-400 px-6 py-3 text-gray-700 font-medium"
+            dangerouslySetInnerHTML={{ __html: data.multiplier }}
+          />
+          <td className="border border-gray-400 px-6 py-3 text-gray-700 font-medium">
+            {data.tolerance}
+          </td>
+          <td className="border border-gray-400 px-6 py-3">
+            <span
+              className="inline-block w-28 h-6 rounded-xl border border-gray-300"
+              style={{ backgroundColor: data.colorSample }}
+            ></span>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
   );
 };
 

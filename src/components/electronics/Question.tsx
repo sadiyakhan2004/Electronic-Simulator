@@ -35,7 +35,7 @@ function Question() {
   };
 
   return (
-    <div className="relative px-6 bg-gray-50 w-full max-w-4xl mx-auto border-2 border-green-600 h-[655px]">
+    <div className="relative px-6 bg-gray-50 w-full max-w-4xl mx-auto border-2 border-green-600 h-[770px]">
       {/* Button in the top-right corner */}
       <div className="absolute top-2 right-4 mt-0">
         <Button

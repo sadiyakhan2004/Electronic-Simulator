@@ -5,7 +5,7 @@ interface BandsProps {
   bands: number[];
 }
 
-const Resister: React.FC<BandsProps> = ({ bands }) => {
+const Resistor: React.FC<BandsProps> = ({ bands }) => {
   return (
     <div className="flex items-center ml-8">
       {/* Left wire */}
@@ -24,4 +24,4 @@ const Resister: React.FC<BandsProps> = ({ bands }) => {
   );
 };
 
-export default Resister;
+export default Resistor;

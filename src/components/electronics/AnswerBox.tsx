@@ -145,7 +145,7 @@ const AnswerBox: React.FC<AnswerBoxProps> = ({
         </div>
       )}
 
-      <div className="flex justify-between items-center mt-6">
+      <div className="flex justify-between items-center mt-8">
         <Button
           variant="success"
           className="w-1/2 mr-2"
