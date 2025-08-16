@@ -8,7 +8,7 @@ This personal project demonstrates interactive calculation of resistor parameter
 ## 🚀 Features
 - Calculates resistor values from color codes  
 - Calculates tolerance  
-- User-friendly and responsive interface  
+- User-friendly interface  
 
 ---
 
